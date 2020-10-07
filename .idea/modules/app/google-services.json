@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "606971923484",
+    "firebase_url": "https://adventure-app-ffab9.firebaseio.com",
+    "project_id": "adventure-app-ffab9",
+    "storage_bucket": "adventure-app-ffab9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606971923484:android:5f3d33528eaca5237063d9",
+        "android_client_info": {
+          "package_name": "com.example.adventureapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606971923484-hk834lork7dri4th1af4plsla9qqcfse.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adventureapp",
+            "certificate_hash": "0853911958354372e1d8f1c3b5f645a5f2fd6846"
+          }
+        },
+        {
+          "client_id": "606971923484-uilqbq0alpfh812gj0gttg1s4uf4g4bp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgWkW_fkXicnv1RVExIgYp8jwzZbwuoWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606971923484-uilqbq0alpfh812gj0gttg1s4uf4g4bp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
