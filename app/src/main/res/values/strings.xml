@@ -21,6 +21,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="dark_mode">dark mode</string>
     <string name="home">Home</string>
+    <string name="sign_out">Sign out</string>
 
 
 </resources>
