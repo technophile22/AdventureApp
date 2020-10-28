@@ -2,11 +2,33 @@
 <resources>
     <color name="colorPrimary">#E85C4B</color>
     <color name="colorPrimaryDark">#E85C4B</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#272727</color>
 
     <color name="buttonText">#212121</color>
     <color name="altText">#909090</color>
     <color name="backgroundColor">#ffffff</color>
     <color name="buttonPrimary">#ffffff</color>
     <color name="formText">#000000</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <!--     home page colours  -->
+
+    <color name="home_background"> #f2f5f8</color>
+    <color name="banner_background"> #f1e9ce</color>
+    <color name="banner_background_light"> #56f1e9ce</color>
+
+    <!--  card colours -->
+
+    <color name="card1">#d4cbe5</color>
+    <color name="card2">#7adccf</color>
+    <color name="card3">#f7c59f</color>
+    <color name="card4">#b8d7f5</color>
+
+    <!-- drawer colours -->
+    <color name="lightWhite">#FFEDED</color>
+
+
+
+
 </resources>

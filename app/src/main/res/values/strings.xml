@@ -2,7 +2,7 @@
     <string name="app_name">Adventure App</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="login">LOGIN</string>
+    <string name="login">Login</string>
     <string name="forgot_password">Forgot Password ?</string>
     <string name="new_user_sign_up_here">New User? Sign Up Here</string>
     <string name="logo">Logo</string>
@@ -22,6 +22,27 @@
     <string name="dark_mode">dark mode</string>
     <string name="home">Home</string>
     <string name="sign_out">Sign out</string>
+    <string name="adventure_with_us">AdvenTour with us</string>
+    <string name="search_text">Search...</string>
+    <string name="cart">Cart</string>
+    <string name="location">Select City</string>
+    <string name="packages">Tour Packages</string>
+    <string name="activities">Activities</string>
+    <string name="featured_activities">Featured Activities</string>
+    <string name="featured_description">Explore all the fun activities and places with us...</string>
+    <string name="tour_packages">Tour Packages</string>
+    <string name="tour_package_description">Explore all the customized tour packages with us...</string>
+    <string name="view_all">View all</string>
+    <string name="tickets">Your Tickets</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="feedback">Feedback</string>
+    <string name="profile">Your Profile</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="logo_name">AdvenTour</string>
+
 
 
 </resources>
