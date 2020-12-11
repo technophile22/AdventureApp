@@ -236,6 +236,8 @@
                         android:textSize="30sp" />
 
                 </LinearLayout>
+
+
             </LinearLayout>
 
 
@@ -595,7 +597,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:background="@drawable/round_bg"
-            android:text="Checkout"
+            android:text="Checkout (600)"
             android:textColor="@color/buttonPrimary"
             android:textSize="18sp"
             android:textStyle="bold"

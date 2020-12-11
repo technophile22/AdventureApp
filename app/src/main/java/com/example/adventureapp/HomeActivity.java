@@ -53,6 +53,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //cart button
+
+        ImageView cart_image = (ImageView) findViewById(R.id.cart);
+
+        cart_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(HomeActivity.this,cart.class);
+                startActivity(mainIntent);
+            }
+        });
+
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         tourRecycler = findViewById(R.id.tour_recycler);
@@ -155,16 +167,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         ArrayList<FeaturedHelperClass> featuredLocations = new ArrayList<>();
-        featuredLocations.add(new FeaturedHelperClass(R.drawable.sajjan, "Sajjangarh", "vfhadvdjvjdnvjkfdnvjfdjvv fv v kdnfndv"));
-        featuredLocations.add(new FeaturedHelperClass(R.drawable.sajjan, "Fish Aquarium", "vfhadvdjvjdndvvfv jvv fv v kdnfndv"));
-        featuredLocations.add(new FeaturedHelperClass(R.drawable.sajjan, "Moti Magri", "vfhadvdjvj dnvvfdvjkfdnvjfv v kdnfndv"));
+        featuredLocations.add(new FeaturedHelperClass(R.drawable.sajjan, "Sajjangarh", "The Monsoon Palace, also known as the Sajjan Garh Palace, is a hilltop palatial residence in the city of Udaipur, Rajasthan in India, overlooking the Fateh Sagar Lake. It is named Sajjangarh after Maharana Sajjan Singh of the Mewar Dynasty, who it was built for in 1884."));
+        featuredLocations.add(new FeaturedHelperClass(R.drawable.badi, "Badi Lake", "Lake Badi, situated in Udaipur city in the Indian state of Rajasthan, is an artificial fresh water lake. The lake was built in the village of Badi, about 12 km from the city of Udaipur, by Maharana Raj Singh I to counteract the devastating effects of a famine. He named it Jiyan Sagar after his mother Jana Devi."));
+        featuredLocations.add(new FeaturedHelperClass(R.drawable.moti, "Moti Magri", "Moti Magri is a hill in India. It overlooks the Fateh Sagar Lake in the city of Udaipur, Rajasthan. Atop the Moti Magri or Pearl Hill is the memorial of the Rajput hero Maharana Pratap, which has a bronze statue of the Maharana astride his favourite horse \"Chetak\""));
 
-        adapter = new FeaturedAdapter(featuredLocations);
+        adapter = new FeaturedAdapter(featuredLocations, getApplicationContext());
         featuredRecycler.setAdapter(adapter);
 
 
 
     }
+
+
 
     private void tourRecycler() {
 
@@ -172,9 +186,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         tourRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         ArrayList<TourHelperClass> tourLocations = new ArrayList<>();
-        tourLocations.add(new TourHelperClass(R.drawable.sajjan, "Sajjangarh", "vfhadvdjvjdnvjkfdnvjfdjvv fv v kdnfndv"));
-        tourLocations.add(new TourHelperClass(R.drawable.sajjan, "Fish Aquarium", "vfhadvdjvjdndvvfv jvv fv v kdnfndv"));
-        tourLocations.add(new TourHelperClass(R.drawable.sajjan, "Moti Magri", "vfhadvdjvj dnvvfdvjkfdnvjfv v kdnfndv"));
+        tourLocations.add(new TourHelperClass(R.drawable.sajjan, "Sajjangarh", "The Monsoon Palace, also known as the Sajjan Garh Palace, is a hilltop palatial residence in the city of Udaipur, Rajasthan in India, overlooking the Fateh Sagar Lake. It is named Sajjangarh after Maharana Sajjan Singh of the Mewar Dynasty, who it was built for in 1884."));
+        tourLocations.add(new TourHelperClass(R.drawable.badi, "Badi Lake", "Lake Badi, situated in Udaipur city in the Indian state of Rajasthan, is an artificial fresh water lake. The lake was built in the village of Badi, about 12 km from the city of Udaipur, by Maharana Raj Singh I to counteract the devastating effects of a famine. He named it Jiyan Sagar after his mother Jana Devi."));
+        tourLocations.add(new TourHelperClass(R.drawable.moti, "Moti Magri", "Moti Magri is a hill in India. It overlooks the Fateh Sagar Lake in the city of Udaipur, Rajasthan. Atop the Moti Magri or Pearl Hill is the memorial of the Rajput hero Maharana Pratap, which has a bronze statue of the Maharana astride his favourite horse \"Chetak\"."));
 
         adapter = new TourAdapter(tourLocations);
         tourRecycler.setAdapter(adapter);

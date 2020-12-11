@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -60,7 +61,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:src="@drawable/sajjan"/>
+                android:src="@drawable/sajjan"
+                android:id="@+id/desc_image"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,12 +73,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sajjangarh"
+                android:id="@+id/desc_title"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/baloo"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/buttonText"
+                android:textColor="@color/black"
                 android:layout_marginStart="20dp" />
 
                 <RatingBar
@@ -94,9 +97,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/desc_description"
                 android:text="The Monsoon Palace, also known as the Sajjan Garh Palace, is a hilltop palatial residence in the city of Udaipur, Rajasthan in India, overlooking the Fateh Sagar Lake. It is named Sajjangarh after Maharana Sajjan Singh of the Mewar Dynasty, who it was built for in 1884."
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
                 android:textSize="18sp"
+                android:textColor="@color/black"
                 />
 
 
@@ -106,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="30dp"
                 >
 

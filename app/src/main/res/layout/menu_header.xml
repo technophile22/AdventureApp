@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
-        android:text="@string/dream_explore_discover" />
+        android:text="@string/dream_explore_discover"
+        android:textColor="@color/black"/>
 
     <TextView
         android:fontFamily="@font/baloo"

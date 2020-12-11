@@ -15,6 +15,7 @@ public class FeaturedHelperClass {
         return image;
     }
 
+
     public String getTitle() {
         return title;
     }

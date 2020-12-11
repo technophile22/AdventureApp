@@ -9,8 +9,8 @@
 
     <RelativeLayout
 
-        android:layout_width="300dp"
-        android:layout_height="170dp"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
         android:padding="10dp"
         android:background="@color/banner_background_light">
 
@@ -30,7 +30,8 @@
             android:layout_toRightOf="@id/tour_image"
             android:fontFamily="@font/baloo"
             android:text="sajjangarh"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
 
         <RatingBar
             android:id="@+id/tour_rating"
@@ -48,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tour_rating"
             android:layout_toRightOf="@id/tour_image"
-
+            android:textColor="@color/black"
             android:layout_marginLeft="20dp"
 
             android:text="vnjfnsvfsnvk fv jfs vfndvjnsfjvnsdf" />

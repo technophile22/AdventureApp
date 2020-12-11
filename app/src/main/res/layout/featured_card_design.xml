@@ -11,17 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="15dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/banner_background_light">
 
         <ImageView
-            android:id="@+id/featured_image"
+            android:id="@+id/desc_image"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:src="@drawable/travel_1"
             android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/featured_title"
+            android:id="@+id/desc_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/baloo"
@@ -36,9 +37,10 @@
             style="@style/Widget.AppCompat.RatingBar.Small"/>
 
         <TextView
-            android:id="@+id/featured_description"
+            android:id="@+id/desc_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="ndjvndv dvdivdivadividhvadvdjvnkjldvnkjladnvkljdnvjnfdjvnjnvljdnvijfdvj" />
 
 
