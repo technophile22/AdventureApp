@@ -4,12 +4,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cart Page"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:id="@+id/cart_title"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:id="@+id/relative_cart"
+            android:layout_below="@+id/cart_title">
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cart_recycler"
@@ -18,11 +39,13 @@
             android:clipToPadding="false"
             android:scrollbars="vertical" />
 
+        </RelativeLayout>
+
 
         <TableLayout
             android:layout_width="match_parent"
             android:id="@+id/priceLayout"
-            android:layout_below="@+id/cart_recycler"
+            android:layout_below="@+id/relative_cart"
             android:padding="@dimen/activity_horizontal_margin"
             android:layout_height="wrap_content">
 
@@ -54,15 +77,16 @@
 
         <Button
             android:id="@+id/button_payment"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/priceLayout"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            android:background="@color/colorPrimary"
+            android:layout_margin="20dp"
+            android:background="@drawable/round_bg"
             android:text="CHECK OUT"
             android:onClick="paymentClick"
-            android:textColor="@color/buttonText"
+            android:textColor="@color/buttonPrimary"
             android:textSize="16dp"
+
             android:layout_centerHorizontal="true" />
 
     </RelativeLayout>

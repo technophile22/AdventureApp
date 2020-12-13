@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checkout"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <ImageView
+        android:id="@+id/handshake"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/checked" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/thank_you"
+        android:layout_alignBottom="@id/handshake"
+        android:text="Your tickets are booked successfully!"
+        android:textColor="@color/black"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/end"
+        android:text="Thanks for booking with us."
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/go_home"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_bg"
+        android:text="Go Home"
+        android:textColor="@color/buttonPrimary" />
+
+
+</LinearLayout>

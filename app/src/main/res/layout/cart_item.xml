@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp"
+    >
+
+    <RelativeLayout
+
+        android:layout_width="340dp"
+        android:layout_height="140dp"
+        android:padding="10dp"
+        android:background="@color/banner_background_light">
 
     <ImageView
         android:id="@+id/cartImage"
@@ -25,6 +36,7 @@
         android:textAppearance="?android:textAppearanceLarge"
         android:layout_toRightOf="@+id/cartImage"
         android:layout_marginTop="20dip"
+        android:fontFamily="@font/baloo"
         android:text="@string/fragrance_name"
         android:textColor="@color/black"
 
@@ -54,10 +66,11 @@
         android:textSize="16sp"
         android:text="@string/price"
         android:layout_below="@+id/quantity"
+        android:fontFamily="@font/roboto_medium"
         android:layout_toEndOf="@+id/cartImage"
         android:layout_toRightOf="@+id/cartImage"
         android:textColor="@color/black"/>
 
+    </RelativeLayout>
 
-
-</RelativeLayout>
+</androidx.cardview.widget.CardView>

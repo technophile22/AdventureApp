@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -31,6 +32,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     //variables
      static final float END_SCALE = 0.7f;
+    private static final String TAG = "Home Activity";
     RecyclerView featuredRecycler;
     RecyclerView tourRecycler;
     RecyclerView.Adapter adapter;
@@ -167,6 +169,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch(item.getItemId()) {
+            case R.id.nav_cart:
+                Intent intent = new Intent(this, cart.class);
+                this.startActivity(intent);
+                break;
+            case R.id.nav_home:
+                Intent intent1 = new Intent(this, HomeActivity.class);
+                this.startActivity(intent1);
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
         return true;
     }
 
