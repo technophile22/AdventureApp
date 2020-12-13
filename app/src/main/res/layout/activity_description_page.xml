@@ -31,17 +31,18 @@
         android:background="#FFEDED">
 
         <ImageView
-            android:id="@+id/menu_icon"
+            android:id="@+id/back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_baseline_menu_24" />
+            android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:id="@+id/cart_btn"
             android:src="@drawable/ic_baseline_shopping_cart_24"
 
             />
@@ -62,7 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:src="@drawable/sajjan"
-                android:id="@+id/desc_image"/>
+                android:id="@+id/desc_image"
+                android:scaleType="centerInside"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -90,7 +92,8 @@
                     android:layout_marginLeft="80dp"
                     android:layout_marginTop="30dp"
                     android:rating="4"
-                    android:layout_marginStart="80dp" />
+                    android:layout_marginStart="80dp"
+                    android:isIndicator="true"/>
 
 
             </LinearLayout>
@@ -146,6 +149,157 @@
                     android:background="@drawable/desc_icon_bg" />
 
             </LinearLayout>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:id="@+id/priceLinearLayout"
+                android:padding="20dp"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="PRICE"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:textSize="20sp"
+                        android:hint="PRICE"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/price"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="20sp"
+                        android:text="Rupees"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/black"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/quantityLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/priceLinearLayout"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/default_gap">
+
+                <TextView
+                    android:id="@+id/quantityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/decrement_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:onClick="decrement"
+                        android:textSize="18sp"
+                        android:text="-"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/quantity_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/initial_quantity_value"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        />
+
+                    <Button
+                        android:id="@+id/increment_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:onClick="increment"
+                        android:textSize="22sp"
+                        android:text="+"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/quantityTotal"
+                android:paddingTop="@dimen/default_gap"
+                android:layout_below="@+id/quantityLinearLayout"
+                android:paddingBottom="@dimen/default_gap"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/total"
+                    style="@style/FormTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Total"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/cost_text_view"
+                    style="@style/FormTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/cart_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/quantityTotal"
+                android:layout_gravity="center"
+                android:onClick="addToCart"
+                android:layout_margin="30dp"
+                android:text="@string/brew_tea"
+                android:background="@drawable/round_bg"
+                android:textColor="@color/buttonPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+
+<!---
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -310,7 +464,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                  />
-                
+                -->
 
 
 

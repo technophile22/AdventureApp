@@ -49,6 +49,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.Featur
         holder.title.setText(featuredHelperClass.getTitle());
         holder.desc.setText(featuredHelperClass.getDescription());
 
+
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +61,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.Featur
                 intent.putExtra("image", featuredHelperClass.getImage());
                 intent.putExtra("title", featuredHelperClass.getTitle());
                 intent.putExtra("description", featuredHelperClass.getDescription());
+                intent.putExtra("price", featuredHelperClass.getPrice());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -87,6 +89,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.Featur
             image = itemView.findViewById(R.id.desc_image);
             title = itemView.findViewById(R.id.desc_title);
             desc = itemView.findViewById(R.id.desc_description);
+
         }
 
 

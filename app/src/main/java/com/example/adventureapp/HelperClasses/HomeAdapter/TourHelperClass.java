@@ -3,11 +3,12 @@ package com.example.adventureapp.HelperClasses.HomeAdapter;
 public class TourHelperClass {
 
     int image;
-    String title, description;
+    String title, description, price;
 
-    public TourHelperClass(int image, String title, String description) {
+    public TourHelperClass(int image, String price, String title, String description) {
         this.image = image;
         this.title = title;
+        this.price = price;
         this.description = description;
     }
 
@@ -22,4 +23,6 @@ public class TourHelperClass {
     public String getDescription() {
         return description;
     }
+
+    public String getPrice() { return price; }
 }
